@@ -1,0 +1,57 @@
+.main {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+}
+
+.top {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 60%;
+
+}
+
+.row {
+    width: 80%;
+    height: 10vh;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.text {
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dynamicCSS {
+    text-decoration: line-through;
+    color: rgb(46, 185, 19);
+}

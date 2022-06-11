@@ -1,0 +1,44 @@
+<template>
+  <div class="main">
+    <h1 class="title">TODO LİST</h1>
+    <div class="top">
+      <lightning-input
+        label="Enter Text"
+        variant="label-hidden"
+        class="input"
+        value={inpVal}
+        onchange={handleChange}
+      ></lightning-input>
+      <lightning-button
+        label="Add ToDo"
+        variant="brand"
+        onclick={handleClick}
+      ></lightning-button>
+      <lightning-icon slot="action" icon-name="utility:sync" onclick={handleRefresh}></lightning-icon>
+    </div>
+    <template if:true={tasksList}>
+      <template for:each={tasksList} for:item="taskList">
+        <div class="row" key={taskList.id}>
+          <div class="text">
+            <h1 class="changeClass">{taskList.name}</h1>
+           
+          </div>
+          <div class="icon">
+            <lightning-button-icon
+            icon-name="utility:check"
+            name={taskList.id}
+            onclick={checkToDo}
+            class="check"
+          ></lightning-button-icon>
+            <lightning-button-icon
+              icon-name="utility:delete"
+              name={taskList.id}
+              onclick={deleteTask}
+            ></lightning-button-icon>
+           
+          </div>
+        </div>
+      </template>
+    </template>
+  </div>
+</template>
